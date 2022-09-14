@@ -173,22 +173,7 @@ UNLOCK TABLES;
 -- Table structure for table `admin_module_actions`
 --
 
-DROP TABLE IF EXISTS `admin_module_actions`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `admin_module_actions` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `module_id` int NOT NULL,
-  `action_id` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `admin_module_idfk_idx` (`module_id`),
-  KEY `admin_action_id_idx` (`action_id`),
-  CONSTRAINT `admin_action_id` FOREIGN KEY (`action_id`) REFERENCES `admin_actions` (`id`),
-  CONSTRAINT `admin_module_idfk` FOREIGN KEY (`module_id`) REFERENCES `admin_modules` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
 -- Dumping data for table `admin_module_actions`
 --
 
